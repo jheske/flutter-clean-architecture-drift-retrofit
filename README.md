@@ -1,11 +1,12 @@
 # Flutter Clean Architecture Example
 
-This is an example project demonstrating how you can create a Flutter Music app using clean architecture. The app includes the following:
+This is an example project demonstrating how you can create a Flutter Music app using clean architecture. It has a minimal UI, which I may continue to enhance as time permits. The app includes the following:
 
 * Retrofit for fetching sample data from a public [mock data source](https://mocki.io/v1/50e26bd0-27e6-4183-93fc-ca9da2662366)
 * Drift database
 * GetIt dependency injection
 * json_theme for reading themes generated on [apppainter.dev](https://appainter.dev/). This allows for easy skinning of your app.
+ - Note we use json_theme version 5.0.2. 6+ appears to have conflicts with other libraries. 
 
 ## Credits
 
@@ -21,7 +22,7 @@ This is a really useful and simple intro to Drift database. If you're new to Flu
 * How to implement Many to Many Relationship
 * How to accomplish migration
 
-### Medium  Articles for Drift Local Database Example: 
+#### Medium  Articles for Drift Local Database Example: 
 
 * [Intro Setup And Migration](https://r1n1os.medium.com/drift-local-database-for-flutter-part-1-intro-setup-and-migration-09a64d44f6df)
 * [One to One Relationship] (https://r1n1os.medium.com/drift-local-database-for-flutter-part-2-one-to-one-relationship-a3a921a53e55)
@@ -40,7 +41,7 @@ I'm fairly new to Flutter, so this repo was incredibly helpful in showing how al
 * Retrofit API calls
 * Bloc state management (which I don't use...yet, I use Provider)
 
-### YouTube Playlist for Flutter-News-App-Clean-Architecture
+#### YouTube Playlist for Flutter-News-App-Clean-Architecture
 
 https://www.youtube.com/watch?v=-4fTwPbuDPs
 
