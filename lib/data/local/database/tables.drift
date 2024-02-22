@@ -1,0 +1,35 @@
+CREATE TABLE User (
+    id INT NOT NULL PRIMARY KEY,
+    username TEXT NOT NULL,
+    music_style TEXT NOT NULL,
+    favorite_song_name TEXT NOT NULL
+) As UserTable;
+
+CREATE TABLE Song (
+    id INT NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    duration INT NOT NULL,
+    artist_id INT NOT NULL REFERENCES Artist(id) ON DELETE CASCADE
+) AS SongTable;
+
+CREATE TABLE Playlist (
+    id INT NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    user_id INT NOT NULL REFERENCES User(id) ON DELETE CASCADE,
+    CONSTRAINT unique_user_playlist UNIQUE (user_id)
+) AS PlaylistTable;
+
+CREATE TABLE PlaylistWithSong (
+    id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
+    song_id INT NOT NULL REFERENCES Song(id),
+    playlist_id INT NOT NULL REFERENCES Playlist(id),
+    CONSTRAINT songIdWithPlaylistId UNIQUE (song_id, playlist_id)
+) AS PlaylistWithSongTable;
+
+CREATE TABLE Artist (
+    id INT NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    age INT NOT NULL,
+    music_style TEXT NOT NULL,
+    isActive INTEGER DEFAULT 0
+) AS ArtistTable;
