@@ -1,24 +1,48 @@
-# drift_local_database_example
+# Flutter Clean Architecture Example
 
-This is an example project demostrating how you can user Drift local database (using the .drift file) into your flutter app.
+This is an example project demonstrating how you can create a Flutter Music app using clean architecture. The app includes the following:
 
-### NOTE: Currently does not have any UI implementation as it is used as an extention/reference to my medium article. I will consider to implement UI as well.
+* Retrofit for fetching sample data from a public [mock data source](https://mocki.io/v1/50e26bd0-27e6-4183-93fc-ca9da2662366)
+* Drift database
+* GetIt dependency injection
+* json_theme for reading themes generated on [apppainter.dev](https://appainter.dev/). This allows for easy skinning of your app.
 
-## Links to the relevant articles: 
-* Intro Setup And Migration: https://r1n1os.medium.com/drift-local-database-for-flutter-part-1-intro-setup-and-migration-09a64d44f6df
-* One to One Relationship: https://r1n1os.medium.com/drift-local-database-for-flutter-part-2-one-to-one-relationship-a3a921a53e55
-* One to Many Relationship https://r1n1os.medium.com/drift-local-database-for-flutter-part-3-one-to-many-relationship-43f24fcc474d
-* Many to Many Relationship https://r1n1os.medium.com/drift-local-database-for-flutter-part-4-many-to-many-relationship-9775b81453d2 
+## Credits
 
-## Includes the following:
-* Setup
+### Drift Local Database Example
+
+[drift\_local\_database\_example\_using\_drift\_file](https://github.com/r1n1os/drift_local_database_example_using_drift_file)
+
+This is a really useful and simple intro to Drift database. If you're new to Flutter or any of these concepts, I recommend starting with this repo. It's an example project demostrating how you can integrate Drift local database (using the .drift file) into your flutter app. It includes a complete database implementation in Drift. It shows separate implementations using .drift files and Dart classes with annotations (note that my app uses the .drift implementation only). It demonstrates the following:
+
+* Drift Database Setup
 * How to implement One to One Relationship
 * How to implement One to Many Relationship
 * How to implement Many to Many Relationship
 * How to accomplish migration
 
-## You can also check the other repository in which I'm showing how to implement the same process using classes:
-Link to repository: https://github.com/r1n1os/drift_local_database_example_using_class_file/tree/main
+### Medium  Articles for Drift Local Database Example: 
+
+* [Intro Setup And Migration](https://r1n1os.medium.com/drift-local-database-for-flutter-part-1-intro-setup-and-migration-09a64d44f6df)
+* [One to One Relationship] (https://r1n1os.medium.com/drift-local-database-for-flutter-part-2-one-to-one-relationship-a3a921a53e55)
+* [One to Many Relationship] (https://r1n1os.medium.com/drift-local-database-for-flutter-part-3-one-to-many-relationship-43f24fcc474d)
+* [Many to Many Relationship] (https://r1n1os.medium.com/drift-local-database-for-flutter-part-4-many-to-many-relationship-9775b81453d2) 
+
+### News App Clean Architecture
+
+[Flutter-News-App-Clean-Architecture](https://github.com/mahdinazmi/Flutter-News-App-Clean-Architecture)
+
+I'm fairly new to Flutter, so this repo was incredibly helpful in showing how all the pieces fit together. It uses a Floor database, whereas mine uses Drift. It demonstrates the following:
+
+* Clean architecture setup
+* Floor Database
+* GetIt dependency injection
+* Retrofit API calls
+* Bloc state management (which I don't use...yet, I use Provider)
+
+### YouTube Playlist for Flutter-News-App-Clean-Architecture
+
+https://www.youtube.com/watch?v=-4fTwPbuDPs
 
 ## References:
  * Package page: https://pub.dev/packages/drift
