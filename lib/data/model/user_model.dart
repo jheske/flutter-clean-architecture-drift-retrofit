@@ -12,7 +12,7 @@
 ///
 /// You should have received a copy of the Apache License, Version 2.0
 /// along with flutter-clean-architecture-drift-retrofit. If not, see <https:///www.apache.org/licenses/LICENSE-2.0>.
-import 'package:drift_local_database_example/data/model/playlist_model.dart';
+import 'package:clean_architecture_with_database/data/model/playlist_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part '.generated/user_model.freezed.dart';

@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="drift_local_database_example"
+        android:label="clean_architecture_with_database"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

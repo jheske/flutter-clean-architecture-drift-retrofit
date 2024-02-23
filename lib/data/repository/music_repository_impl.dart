@@ -14,14 +14,14 @@
 /// along with flutter-clean-architecture-drift-retrofit. If not, see <https:///www.apache.org/licenses/LICENSE-2.0>.
 import 'dart:io';
 
+import 'package:clean_architecture_with_database/data/domain/entity/artist_entity.dart';
+import 'package:clean_architecture_with_database/data/domain/entity/playlist_entity.dart';
+import 'package:clean_architecture_with_database/data/domain/entity/song_entity.dart';
+import 'package:clean_architecture_with_database/data/model/model_extensions.dart';
+import 'package:clean_architecture_with_database/data/model/music_model.dart';
+import 'package:clean_architecture_with_database/data/model/user_model.dart';
 import 'package:dio/dio.dart';
 import 'package:drift/drift.dart';
-import 'package:drift_local_database_example/data/domain/entity/artist_entity.dart';
-import 'package:drift_local_database_example/data/domain/entity/playlist_entity.dart';
-import 'package:drift_local_database_example/data/domain/entity/song_entity.dart';
-import 'package:drift_local_database_example/data/model/model_extensions.dart';
-import 'package:drift_local_database_example/data/model/music_model.dart';
-import 'package:drift_local_database_example/data/repository/music_repository.dart';
 import 'package:flutter/foundation.dart';
 
 import '../../utils/music_local_data_source.dart';
@@ -29,8 +29,8 @@ import '../domain/entity/user_entity.dart';
 import '../local/database/app_database.dart';
 import '../model/artist_model.dart';
 import '../model/song_model.dart';
-import '../model/user_model.dart';
 import '../remote/music_api_service.dart';
+import 'music_repository.dart';
 
 /// This class is the implementation of the [ArticleRepository] interface.
 /// It implements the database CRUD operations.
@@ -298,24 +298,3 @@ class MusicRepositoryImpl implements Repository {
     return songsInPlaylist;
   }
 }
-/*
-/// Try this later with Bloc and UseCases
- @override
-  Future<DataState<MusicModel?>> fetchMusic() async {
-    try {
-      final httpResponse = await _apiService.fetchMusic();
-
-      if (httpResponse.response.statusCode == HttpStatus.ok) {
-        return DataSuccess(httpResponse.data);
-      } else {
-        return DataFailed(DioException(
-            error: httpResponse.response.statusMessage,
-            response: httpResponse.response,
-            type: DioExceptionType.badResponse,
-            requestOptions: httpResponse.response.requestOptions));
-      }
-    } on DioException catch (e) {
-      return DataFailed(e);
-    }
-  }
- */

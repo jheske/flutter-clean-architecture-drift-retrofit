@@ -12,7 +12,7 @@
 ///
 /// You should have received a copy of the Apache License, Version 2.0
 /// along with flutter-clean-architecture-drift-retrofit. If not, see <https:///www.apache.org/licenses/LICENSE-2.0>.
-import 'package:drift_local_database_example/data/domain/entity/artist_entity.dart';
+import 'package:clean_architecture_with_database/data/domain/entity/artist_entity.dart';
 
 import '../domain/entity/song_entity.dart';
 import '../domain/entity/user_entity.dart';

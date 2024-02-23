@@ -14,16 +14,16 @@
 /// along with flutter-clean-architecture-drift-retrofit. If not, see <https:///www.apache.org/licenses/LICENSE-2.0>.
 import 'dart:convert';
 
-import 'package:drift_local_database_example/core/di/injection_container.dart';
-import 'package:drift_local_database_example/core/router_config.dart';
-import 'package:drift_local_database_example/data/domain/entity/song_entity.dart';
-import 'package:drift_local_database_example/data/model/model_extensions.dart';
+import 'package:clean_architecture_with_database/core/di/injection_container.dart';
+import 'package:clean_architecture_with_database/core/router_config.dart';
+import 'package:clean_architecture_with_database/data/model/model_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:json_theme/json_theme.dart';
 import 'package:provider/provider.dart';
 
 import 'data/domain/entity/artist_entity.dart';
+import 'data/domain/entity/song_entity.dart';
 import 'data/domain/entity/user_entity.dart';
 import 'data/repository/music_repository.dart';
 

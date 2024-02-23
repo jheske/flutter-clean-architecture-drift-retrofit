@@ -14,7 +14,7 @@
 /// along with flutter-clean-architecture-drift-retrofit. If not, see <https:///www.apache.org/licenses/LICENSE-2.0>.
 
 // Import statements for required packages and files.
-import 'package:drift_local_database_example/screens/database_viewer_screen.dart';
+import 'package:clean_architecture_with_database/screens/database_viewer_screen.dart';
 import 'package:go_router/go_router.dart';
 
 import '../screens/artist_screen.dart';

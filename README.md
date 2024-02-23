@@ -12,7 +12,7 @@ This is an example project demonstrating how you can create a Flutter Music app 
 
 ### Drift Local Database Example
 
-[drift\_local\_database\_example\_using\_drift\_file](https://github.com/r1n1os/drift_local_database_example_using_drift_file)
+[drift\_local\_database\_example\_using\_drift\_file](https://github.com/r1n1os/clean_architecture_with_database_using_drift_file)
 
 This is a really useful and simple intro to Drift database. If you're new to Flutter or any of these concepts, I recommend starting with this repo. It's an example project demostrating how you can integrate Drift local database (using the .drift file) into your flutter app. It includes a complete database implementation in Drift. It shows separate implementations using .drift files and Dart classes with annotations (note that my app uses the .drift implementation only). It demonstrates the following:
 

@@ -12,21 +12,17 @@
 ///
 /// You should have received a copy of the Apache License, Version 2.0
 /// along with flutter-clean-architecture-drift-retrofit. If not, see <https:///www.apache.org/licenses/LICENSE-2.0>.
+import 'package:clean_architecture_with_database/data/model/playlist_model.dart';
+import 'package:clean_architecture_with_database/data/model/playlist_with_song_model.dart';
+import 'package:clean_architecture_with_database/data/model/song_model.dart';
+import 'package:clean_architecture_with_database/data/model/user_model.dart';
 import 'package:drift/drift.dart';
-import 'package:drift_local_database_example/data/model/playlist_model.dart';
-import 'package:drift_local_database_example/data/model/playlist_with_song_model.dart';
-import 'package:drift_local_database_example/data/model/song_model.dart';
-import 'package:drift_local_database_example/data/model/user_model.dart';
 import 'package:flutter/foundation.dart';
 
-import '../../../core/di/injection_container.dart';
+import '../../core/di/injection_container.dart';
 import '../local/database/app_database.dart';
 import 'artist_model.dart';
 import 'music_model.dart';
-
-/// drift.dart conflicts with the freezed package.
-/// Moving database function to the extension in a separate
-/// file avoids the conflict.
 
 extension MusicModelExtension on MusicModel {
   Future<void> saveToDatabase() async {
