@@ -56,6 +56,7 @@ dependencies:
   logging: ^1.2.0
   mockito: ^5.4.4
   change_app_package_name: ^1.1.0
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:

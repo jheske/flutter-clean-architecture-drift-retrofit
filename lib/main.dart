@@ -25,17 +25,18 @@ import 'package:provider/provider.dart';
 import 'data/domain/entity/artist_entity.dart';
 import 'data/domain/entity/song_entity.dart';
 import 'data/domain/entity/user_entity.dart';
+import 'data/local/database/app_database.dart';
 import 'data/repository/music_repository.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Ensure that the service locator is initialized so entities can retrieve instances as follows:
-  //
-  // ```dart
-  // AppDatabase database = serviceLocator.get<AppDatabase>();
-  // AppDatabase repository = serviceLocator.get<DatabaseRepository>();
-  // ```
+
+  // Ensure that the service locator is initialized so entities can retrieve
+  // database and repository instances.
   await initializeServiceLocator();
+
+  final database = serviceLocator.get<AppDatabase>();
+  final repository = serviceLocator.get<Repository>();
 
   final themeStr =
       await rootBundle.loadString('assets/themes/app_painter_theme_F44336_redorange_light.json');
@@ -43,9 +44,10 @@ Future<void> main() async {
 
   final theme = ThemeDecoder.decodeThemeData(themeJson)!;
 
-  final repository = serviceLocator.get<Repository>();
-
   repository.clearDatabase();
+
+  final artistTable = database.artist;
+
   final music = await repository.fetchMusic();
   music.saveToDatabase();
 
